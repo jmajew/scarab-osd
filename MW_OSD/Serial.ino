@@ -681,6 +681,7 @@ void serialMenuCommon()
 	  if(ROW==3) Settings[S_AMPERAGE_VIRTUAL]=!Settings[S_AMPERAGE_VIRTUAL];
 	  if(ROW==4) S16_AMPMAX=S16_AMPMAX+menudir;
 	  if(ROW==5) Settings[S_AMPMIN]=Settings[S_AMPMIN]+menudir;
+	  if(ROW==6) Settings[S_AMPDIVIDERRATIO]=Settings[S_AMPDIVIDERRATIO]+menudir;
 	}
 #endif
 #ifdef PAGE6

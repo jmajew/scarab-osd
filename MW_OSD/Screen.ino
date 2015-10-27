@@ -1057,8 +1057,10 @@ void displayCursor(void)
     if(configPage==5)
       {  
       COL=3;
-      if (ROW==9) ROW=5;
-      if (ROW==6) ROW=10;
+      //if (ROW==6) ROW=10;
+      //if (ROW==9) ROW=5;
+      if (ROW==7) ROW=10;
+      if (ROW==9) ROW=6;
       cursorpos=(ROW+2)*30+10+6+6;
       }
 #endif
@@ -1301,7 +1303,7 @@ void displayConfigScreen(void)
     screenBuffer[5] = 0;
     MAX7456_WriteString(screenBuffer,ROLLD-LINE-LINE-1);
 
-    for(uint8_t X=0; X<=4; X++) {
+    for(uint8_t X=0; X<=5; X++) {
       strcpy_P(screenBuffer, (char*)pgm_read_word(&(menu_amps[X])));
       MAX7456_WriteString(screenBuffer, ROLLT+ (X*30));
     }
@@ -1310,6 +1312,7 @@ void displayConfigScreen(void)
     Menuconfig_onoff(YAWD,S_AMPERAGE_VIRTUAL);
     MAX7456_WriteString(itoa(S16_AMPMAX,screenBuffer,10),ALTD);
     MAX7456_WriteString(itoa(Settings[S_AMPMIN],screenBuffer,10),VELD);
+    MAX7456_WriteString(itoa(Settings[S_AMPDIVIDERRATIO],screenBuffer,10),LEVD);
   }
 #else
     if(configPage == 5)configPage+=menudir;  

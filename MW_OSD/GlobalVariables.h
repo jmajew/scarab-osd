@@ -794,6 +794,7 @@ const char configMsg52[] PROGMEM = "DISPLAY MAH";
 const char configMsg53[] PROGMEM = "USE VIRTUAL SENSOR";
 const char configMsg54[] PROGMEM = "ADJUST AMPS";
 const char configMsg55[] PROGMEM = "ADJUST ZERO";
+const char configMsg56[] PROGMEM = "ADJUST DIVIDER";
 //-----------------------------------------------------------Page6
 const char configMsg60[] PROGMEM = "DISPLAY";
 const char configMsg61[] PROGMEM = "HORIZON";
@@ -997,6 +998,7 @@ const PROGMEM char * const menu_amps[] =
   configMsg53,
   configMsg54,
   configMsg55,
+  configMsg56,
 };
 
 const PROGMEM char * const menu_display[] = 
